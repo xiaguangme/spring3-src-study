@@ -330,7 +330,8 @@ public abstract class StringUtils {
 
 	/**
 	 * Test whether the given string matches the given substring
-	 * at the given index.
+	 * at the given index. 从str的指定位置(index参数)立即(也就是从index开始就要匹配，过几个字符才开始匹配上不算)向后找substring，找到则为true，否则为false
+	 * 
 	 * @param str the original string (or StringBuilder)
 	 * @param index the index in the original string to start matching against
 	 * @param substring the substring to match at the given index

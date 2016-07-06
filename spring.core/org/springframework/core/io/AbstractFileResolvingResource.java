@@ -45,7 +45,7 @@ public abstract class AbstractFileResolvingResource extends AbstractResource {
 	 */
 	@Override
 	public File getFile() throws IOException {
-		URL url = getURL();
+		URL url = getURL();System.out.println("CLasisisisisisi123123:" + this.getClass());
 		if (url.getProtocol().startsWith(ResourceUtils.URL_PROTOCOL_VFS)) {
 			return VfsResourceDelegate.getResource(url).getFile();
 		}

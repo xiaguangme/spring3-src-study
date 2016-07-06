@@ -134,8 +134,8 @@ public class PropertyPlaceholderHelper {
 		while (startIndex != -1) {
 			int endIndex = findPlaceholderEndIndex(buf, startIndex);
 			if (endIndex != -1) {
-				String placeholder = buf.substring(startIndex + this.placeholderPrefix.length(), endIndex);
-				if (!visitedPlaceholders.add(placeholder)) {
+				String placeholder = buf.substring(startIndex + this.placeholderPrefix.length(), endIndex);// 取出占位符的名字
+				if (!visitedPlaceholders.add(placeholder)) { // 因为下面支持占位符的值还是一个占位符，此处解决了循环引用的问题，就是把解析过的占位符名称放到set，一旦再次解析时发现已经有了则是循环
 					throw new IllegalArgumentException(
 							"Circular placeholder reference '" + placeholder + "' in property definitions");
 				}
@@ -145,7 +145,7 @@ public class PropertyPlaceholderHelper {
 				// Now obtain the value for the fully resolved key...
 				String propVal = placeholderResolver.resolvePlaceholder(placeholder);
 				if (propVal == null && this.valueSeparator != null) {
-					int separatorIndex = placeholder.indexOf(this.valueSeparator);
+					int separatorIndex = placeholder.indexOf(this.valueSeparator);// 支持占位符的值这样的写法 真实占位符名称:默认值。 就是先通过占位符取到他的值，这个值由真正的占位符加分隔符加默认值组成。
 					if (separatorIndex != -1) {
 						String actualPlaceholder = placeholder.substring(0, separatorIndex);
 						String defaultValue = placeholder.substring(separatorIndex + this.valueSeparator.length());
@@ -158,7 +158,7 @@ public class PropertyPlaceholderHelper {
 				if (propVal != null) {
 					// Recursive invocation, parsing placeholders contained in the
 					// previously resolved placeholder value.
-					propVal = parseStringValue(propVal, placeholderResolver, visitedPlaceholders);
+					propVal = parseStringValue(propVal, placeholderResolver, visitedPlaceholders); // 允许占位符的值还是一个占位符，然后会继续解析，
 					buf.replace(startIndex, endIndex + this.placeholderSuffix.length(), propVal);
 					if (logger.isTraceEnabled()) {
 						logger.trace("Resolved placeholder '" + placeholder + "'");
@@ -183,7 +183,7 @@ public class PropertyPlaceholderHelper {
 		return buf.toString();
 	}
 
-	private int findPlaceholderEndIndex(CharSequence buf, int startIndex) {
+	private int findPlaceholderEndIndex(CharSequence buf, int startIndex) { // 找到占位符结束的地方（注意占位符名字本身可能含有{}）
 		int index = startIndex + this.placeholderPrefix.length();
 		int withinNestedPlaceholder = 0;
 		while (index < buf.length()) {
