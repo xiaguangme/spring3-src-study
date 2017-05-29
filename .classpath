@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="spring.beans.case"/>
 	<classpathentry kind="src" path="spring.asm"/>
 	<classpathentry kind="src" path="spring.beans"/>
+        <classpathentry kind="src" path="spring.beans.case"/>
 	<classpathentry kind="src" path="spring.context"/>
 	<classpathentry kind="src" path="spring.core"/>
+        <classpathentry kind="src" path="spring.core.case"/>
 	<classpathentry kind="src" path="spring.expression"/>
-	<classpathentry kind="src" path="spring.core.case"/>
 	<classpathentry kind="src" path="spring.orm"/>
 	<classpathentry kind="src" path="spring.web"/>
 	<classpathentry kind="src" path="spring.webmvc"/>
