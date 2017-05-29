@@ -10,7 +10,6 @@ package org.simonme.srcstudy.spring3.core.resource;
 import java.io.IOException;
 
 import org.junit.Test;
-import org.springframework.core.io.ContextResource;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 
@@ -27,54 +26,63 @@ public class DefaultResourceLoaderTest
 {
     
     @Test
-    public void testGetResource001()
+    public void test001()
     {
-        DefaultResourceLoader loader = new DefaultResourceLoader();
-        Resource resource = loader.getResource("org/simonme/srcstudy/spring3/core/resource/testConfigData.properties");
-        System.out.println(resource);
-        System.out.println(resource.getClass());
-        System.out.println("PathWithinContext:" + ((ContextResource)resource).getPathWithinContext());
-        try
-        {
-            System.out.println("URL:" + ((ContextResource)resource).getURL());
-        }
-        catch (IOException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        
-        /**
-         * class path resource [org/simonme/srcstudy/spring3/core/resource/testConfigData.properties]
-         * class org.springframework.core.io.DefaultResourceLoader$ClassPathContextResource
-         * PathWithinContext:org/simonme/srcstudy/spring3/core/resource/testConfigData.properties
-         * URL:file:/Users/simon/600.self/05.code/04.java/11.spring3-src-study/spring3-src-study/bin/org/simonme/srcstudy/spring3/core/resource/testConfigData.properties
-         */
+        String fileName = "org/simonme/srcstudy/spring3/core/resource/JDKResourceAPITest.class";
+        getResourceByClass(fileName);
     }
     
     @Test
-    public void testGetResource002()
+    public void test002()
+    {
+        String fileName = "../TestTemp.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test003()
+    {
+        String fileName = "/org/simonme/srcstudy/spring3/core/resource/JDKResourceAPITest.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test004()
+    {
+        String fileName = "org/apache/commons/logging/impl/AvalonLogger.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test005()
+    {
+        String fileName = "/org/apache/commons/logging/impl/AvalonLogger.class";
+        getResourceByClass(fileName);
+    }
+    
+    private void getResourceByClass(String fileName)
     {
         DefaultResourceLoader loader = new DefaultResourceLoader();
-        Resource resource = loader.getResource("file:/Users/simon/600.self/05.code/04.java/11.spring3-src-study/spring3-src-study/bin/org/simonme/srcstudy/spring3/core/resource/testConfigData.properties");
-        System.out.println(resource);
-        System.out.println(resource.getClass());
-        System.out.println("PathWithinContext:" + ((ContextResource)resource).getPathWithinContext());
+        Resource resource = loader.getResource(fileName);
         try
         {
-            System.out.println("URL:" + ((ContextResource)resource).getURL());
+            System.out.println(resource.getClass());
+            System.out.println(resource.getURL());
         }
         catch (IOException e)
         {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println("异常");
         }
-        
-        /**
-         * class path resource [org/simonme/srcstudy/spring3/core/resource/testConfigData.properties]
-         * class org.springframework.core.io.DefaultResourceLoader$ClassPathContextResource
-         * PathWithinContext:org/simonme/srcstudy/spring3/core/resource/testConfigData.properties
-         * URL:file:/Users/simon/600.self/05.code/04.java/11.spring3-src-study/spring3-src-study/bin/org/simonme/srcstudy/spring3/core/resource/testConfigData.properties
-         */
+        try
+        {
+            System.out.println(resource.getInputStream());
+        }
+        catch (IOException e)
+        {
+            System.out.println("异常");
+        }
+        System.out.println("------");
     }
+    
+   
 }

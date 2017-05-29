@@ -7,6 +7,8 @@
  */
 package org.simonme.srcstudy.spring3.core.resource;
 
+import java.io.IOException;
+
 import org.junit.Test;
 import org.springframework.core.io.FileSystemResourceLoader;
 import org.springframework.core.io.Resource;
@@ -23,12 +25,62 @@ import org.springframework.core.io.Resource;
 public class FileSystemResourceLoaderTest
 {
     
-
     @Test
-    public void testGetResourceByPath001()
+    public void test001()
+    {
+        String fileName = "org/simonme/srcstudy/spring3/core/resource/JDKResourceAPITest.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test002()
+    {
+        String fileName = "../TestTemp.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test003()
+    {
+        String fileName = "/org/simonme/srcstudy/spring3/core/resource/JDKResourceAPITest.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test004()
+    {
+        String fileName = "org/apache/commons/logging/impl/AvalonLogger.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test005()
+    {
+        String fileName = "/org/apache/commons/logging/impl/AvalonLogger.class";
+        getResourceByClass(fileName);
+    }
+    
+    private void getResourceByClass(String fileName)
     {
         FileSystemResourceLoader loader = new FileSystemResourceLoader();
-        Resource resource = loader.getResource("org/simonme/srcstudy/spring3/core/resource/testConfigData.properties");
-        System.out.println(resource);
+        Resource resource = loader.getResource(fileName);
+        try
+        {
+            System.out.println(resource.getClass());
+            System.out.println(resource.getURL());
+        }
+        catch (IOException e)
+        {
+            System.out.println("异常");
+        }
+        try
+        {
+            System.out.println(resource.getInputStream());
+        }
+        catch (IOException e)
+        {
+            System.out.println("异常");
+        }
+        System.out.println("---");
     }
 }
