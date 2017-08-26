@@ -10,7 +10,6 @@ package org.simonme.srcstudy.spring3.core.resource;
 import java.io.IOException;
 
 import org.junit.Test;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
@@ -27,18 +26,102 @@ public class PathMatchingResourcePatternResolverTest
 {
     
     @Test
-    public void testContextResource001()
+    public void test001()
     {
-        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        String fileName = "org/simonme/srcstudy/spring3/core/resource/JDKResourceAPITest.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test002()
+    {
+        String fileName = "../TestTemp.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test003()
+    {
+        String fileName = "/org/simonme/srcstudy/spring3/core/resource/JDKResourceAPITest.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test004()
+    {
+        String fileName = "org/apache/commons/logging/impl/AvalonLogger.class";
+        getResourceByClass(fileName);
+    }
+    
+    @Test
+    public void test005()
+    {
+        String fileName = "/org/apache/commons/logging/impl/AvalonLogger.class";
+        getResourceByClass(fileName);
+    }
+    
+    private void getResourceByClass(String fileName)
+    {
+        PathMatchingResourcePatternResolver loader = new PathMatchingResourcePatternResolver();
+        Resource resource = loader.getResource(fileName);
         try
         {
-            Resource[] resources = resolver.getResources("classpath*:org/apache/commons/logging/*.class");
-            System.out.println((resources[0].getClass()));
+            System.out.println(resource.getClass());
+            System.out.println(resource.getURL());
         }
         catch (IOException e)
         {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println("异常");
         }
+        try
+        {
+            System.out.println(resource.getInputStream());
+        }
+        catch (IOException e)
+        {
+            System.out.println("异常");
+        }
+        System.out.println("------");
     }
+    
+    @Test
+    public void test011()
+    {
+        String fileName = "classpath:**/*Test.class";
+        getResourcesByClass(fileName);
+    }
+    
+    private void getResourcesByClass(String fileName)
+    {
+        PathMatchingResourcePatternResolver loader = new PathMatchingResourcePatternResolver();
+        Resource[] resources = null;
+        try
+        {
+            resources = loader.getResources(fileName);
+            for (Resource resource : resources)
+            {
+                System.out.println(resource.getClass());
+                System.out.println(resource.getURL());
+            }
+            
+        }
+        catch (IOException e)
+        {
+            System.out.println("异常");
+        }
+        try
+        {
+            for (Resource resource : resources)
+            {
+                System.out.println(resource.getInputStream());
+            }
+        }
+        catch (IOException e)
+        {
+            System.out.println("异常");
+        }
+        System.out.println("------");
+    }
+    
+   
 }
