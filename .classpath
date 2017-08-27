@@ -3,14 +3,20 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="spring.asm"/>
 	<classpathentry kind="src" path="spring.beans"/>
-        <classpathentry kind="src" path="spring.beans.case"/>
+	<classpathentry kind="src" path="spring.beans.case"/>
 	<classpathentry kind="src" path="spring.context"/>
 	<classpathentry kind="src" path="spring.core"/>
-        <classpathentry kind="src" path="spring.core.case"/>
+	<classpathentry kind="src" path="spring.core.case"/>
 	<classpathentry kind="src" path="spring.expression"/>
 	<classpathentry kind="src" path="spring.orm"/>
 	<classpathentry kind="src" path="spring.web"/>
 	<classpathentry kind="src" path="spring.webmvc"/>
+	<classpathentry kind="src" path="spring.aop"/>
+	<classpathentry kind="src" path="spring.instrument"/>
+	<classpathentry kind="src" path="spring.tx"/>
+	<classpathentry kind="src" path="spring.jdbc"/>
+	<classpathentry kind="src" path="spring.oxm"/>
+	<classpathentry kind="src" path="spring.context.support"/>
 	<classpathentry kind="lib" path="libs/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/org.springframework.asm-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="libs/cglib-nodep-2.2.jar"/>
@@ -18,6 +24,74 @@
 	<classpathentry kind="lib" path="libs/javax.inject-1.jar"/>
 	<classpathentry kind="lib" path="libs/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="lib" path="libs/junit-4.11.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/aspectjweaver-1.6.8.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="libs/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="libs/geronimo-ejb_3.1_spec-1.0.2.jar"/>
+	<classpathentry kind="lib" path="libs/geronimo-interceptor_1.1_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="libs/geronimo-jms_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/joda-time-1.6.jar"/>
+	<classpathentry kind="lib" path="libs/backport-util-concurrent-3.0.jar"/>
+	<classpathentry kind="lib" path="libs/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="libs/groovy-all-1.6.3.jar"/>
+	<classpathentry kind="lib" path="libs/jruby-1.4.0.jar"/>
+	<classpathentry kind="lib" path="libs/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate-validator-4.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate-core-3.3.1.GA.jar"/>
+	<classpathentry kind="lib" path="libs/geronimo-jta_1.1_spec-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate-annotations-3.4.0.GA.jar"/>
+	<classpathentry kind="lib" path="libs/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="libs/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-mapper-asl-1.4.2.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-core-asl-1.4.2.jar"/>
+	<classpathentry kind="lib" path="libs/rome-1.0.jar"/>
+	<classpathentry kind="lib" path="libs/jsf-api-1.2_08.jar"/>
+	<classpathentry kind="lib" path="libs/portlet-api-2.0.jar"/>
+	<classpathentry kind="lib" path="libs/commons-fileupload-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/jsp-api-2.1.jar"/>
+	<classpathentry kind="lib" path="libs/com.springsource.com.caucho-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate-entitymanager-3.4.0.GA.jar"/>
+	<classpathentry kind="lib" path="libs/ibatis-sqlmap-2.3.4.726.jar"/>
+	<classpathentry kind="lib" path="libs/jaxrpc-api-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/jdo2-api-2.1.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.persistence.core-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.persistence.antlr-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.persistence.asm-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.persistence.jpa-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/openjpa-1.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/toplink-essentials-2.0-41.jar"/>
+	<classpathentry kind="lib" path="libs/freemarker-2.3.15.jar"/>
+	<classpathentry kind="lib" path="libs/itext-2.0.8.jar"/>
+	<classpathentry kind="lib" path="libs/jasperreports-2.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/jstl-1.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/jxl-2.6.3.jar"/>
+	<classpathentry kind="lib" path="libs/poi-3.0.2-FINAL.jar"/>
+	<classpathentry kind="lib" path="libs/stax-1.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/tiles-api-2.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/velocity-1.5.jar"/>
+	<classpathentry kind="lib" path="libs/velocity-tools-view-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/tiles-core-2.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/tiles-jsp-2.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/tiles-servlet-2.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="libs/ehcache-1.6.2.jar"/>
+	<classpathentry kind="lib" path="libs/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/com.springsource.commonj-1.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/hsqldb-1.8.0.10.jar"/>
+	<classpathentry kind="lib" path="libs/quartz-1.6.2.jar"/>
+	<classpathentry kind="lib" path="libs/jamon-2.4.jar"/>
+	<classpathentry kind="lib" path="libs/commons-pool-1.5.3.jar"/>
+	<classpathentry kind="lib" path="libs/connector-api-1.5.jar"/>
+	<classpathentry kind="lib" path="libs/com.springsource.com.ibm.websphere.uow-6.0.2.17.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 6 (MacOS X Default)"/>
+	<classpathentry kind="lib" path="libs/com.springsource.org.apache.derby-10.5.1000001.764942.jar"/>
+	<classpathentry kind="lib" path="libs/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/castor-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/jaxb-impl-2.1.7.jar"/>
+	<classpathentry kind="lib" path="libs/jibx-run-1.1.5.jar"/>
+	<classpathentry kind="lib" path="libs/xercesImpl-2.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/xmlbeans-2.4.0.jar"/>
+	<classpathentry kind="lib" path="libs/xstream-1.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

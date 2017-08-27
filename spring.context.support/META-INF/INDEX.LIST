@@ -1,0 +1,18 @@
+JarIndex-Version: 1.0
+
+org.springframework.context.support-sources.jar
+org
+org/springframework
+org/springframework/cache
+org/springframework/cache/ehcache
+org/springframework/mail
+org/springframework/mail/javamail
+org/springframework/scheduling
+org/springframework/scheduling/commonj
+org/springframework/scheduling/quartz
+org/springframework/ui
+org/springframework/ui/freemarker
+org/springframework/ui/jasperreports
+org/springframework/ui/velocity
+overview.html
+

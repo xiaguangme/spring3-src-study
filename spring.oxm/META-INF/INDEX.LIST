@@ -1,0 +1,15 @@
+JarIndex-Version: 1.0
+
+org.springframework.oxm-sources.jar
+org
+org/springframework
+org/springframework/oxm
+org/springframework/oxm/castor
+org/springframework/oxm/config
+org/springframework/oxm/jaxb
+org/springframework/oxm/jibx
+org/springframework/oxm/mime
+org/springframework/oxm/support
+org/springframework/oxm/xmlbeans
+org/springframework/oxm/xstream
+
