@@ -17,6 +17,7 @@
 	<classpathentry kind="src" path="spring.jdbc"/>
 	<classpathentry kind="src" path="spring.oxm"/>
 	<classpathentry kind="src" path="spring.context.support"/>
+	<classpathentry kind="src" path="spring.test"/>
 	<classpathentry kind="lib" path="libs/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/org.springframework.asm-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="libs/cglib-nodep-2.2.jar"/>

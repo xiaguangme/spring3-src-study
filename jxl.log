@@ -1,0 +1,21 @@
+2017-08-28 00:33:00,559 [INFO ] org.springframework.context.support.ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@368b1a4f: startup date [Mon Aug 28 00:33:00 CST 2017]; root of context hierarchy
+2017-08-28 00:33:00,599 [INFO ] org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2017-08-28 00:33:00,601 [DEBUG] org.springframework.beans.factory.xml.DefaultDocumentLoader  - Using JAXP provider [org.apache.xerces.jaxp.DocumentBuilderFactoryImpl]
+2017-08-28 00:33:00,698 [DEBUG] org.springframework.beans.factory.xml.PluggableSchemaResolver  - Loading schema mappings from [META-INF/spring.schemas]
+2017-08-28 00:33:00,699 [DEBUG] org.springframework.beans.factory.xml.PluggableSchemaResolver  - Loaded schema mappings: {}
+2017-08-28 00:33:01,650 [DEBUG] org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader  - Loading bean definitions
+2017-08-28 00:33:01,665 [DEBUG] org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loaded 4 bean definitions from location pattern [applicationContext.xml]
+2017-08-28 00:33:01,665 [DEBUG] org.springframework.context.support.ClassPathXmlApplicationContext  - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@368b1a4f: org.springframework.beans.factory.support.DefaultListableBeanFactory@5fa13338: defining beans [serviceA,serviceB,userDaoa,userService]; root of factory hierarchy
+2017-08-28 00:33:01,684 [DEBUG] org.springframework.context.support.ClassPathXmlApplicationContext  - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@1594df96]
+2017-08-28 00:33:01,686 [DEBUG] org.springframework.context.support.ClassPathXmlApplicationContext  - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@5b89a773]
+2017-08-28 00:33:01,686 [INFO ] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5fa13338: defining beans [serviceA,serviceB,userDaoa,userService]; root of factory hierarchy
+2017-08-28 00:33:01,687 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating shared instance of singleton bean 'serviceA'
+2017-08-28 00:33:01,687 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating instance of bean 'serviceA'
+2017-08-28 00:33:01,698 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Eagerly caching bean 'serviceA' to allow for resolving potential circular references
+2017-08-28 00:33:01,713 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Finished creating instance of bean 'serviceA'
+2017-08-28 00:33:01,713 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating shared instance of singleton bean 'serviceB'
+2017-08-28 00:33:01,713 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating instance of bean 'serviceB'
+2017-08-28 00:33:01,713 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Eagerly caching bean 'serviceB' to allow for resolving potential circular references
+2017-08-28 00:33:01,715 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Finished creating instance of bean 'serviceB'
+2017-08-28 00:33:01,715 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating shared instance of singleton bean 'userDaoa'
+2017-08-28 00:33:01,715 [DEBUG] org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating instance of bean 'userDaoa'

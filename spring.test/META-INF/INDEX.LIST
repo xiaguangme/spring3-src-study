@@ -1,0 +1,24 @@
+JarIndex-Version: 1.0
+
+org.springframework.test-sources.jar
+org
+org/springframework
+org/springframework/mock
+org/springframework/mock/jndi
+org/springframework/mock/web
+org/springframework/mock/web/portlet
+org/springframework/test
+org/springframework/test/annotation
+org/springframework/test/context
+org/springframework/test/context/junit38
+org/springframework/test/context/junit4
+org/springframework/test/context/junit4/statements
+org/springframework/test/context/support
+org/springframework/test/context/testng
+org/springframework/test/context/transaction
+org/springframework/test/jdbc
+org/springframework/test/jpa
+org/springframework/test/util
+org/springframework/test/web
+overview.html
+

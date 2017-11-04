@@ -69,6 +69,7 @@ public class ClassRelativeResourceLoaderTest
         {
             System.out.println(resource.getClass());
             System.out.println(resource.getURL());
+            System.out.println(resource.getURL().getFile());
         }
         catch (IOException e)
         {

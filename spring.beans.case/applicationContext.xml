@@ -11,4 +11,12 @@
 	<bean id="serviceB" class="org.simonme.srcstudy.spring3.demo.service.impl.ServiceBImpl">
 		<property name="field" value="field4BInstacne"/>
 	</bean>
+	
+	
+	<bean id="userDaoa" class="org.simonme.srcstudy.spring3.demo.dao.impl.UserDaoAImpl">
+	</bean>
+	
+	<bean id="userService" class="org.simonme.srcstudy.spring3.demo.service.impl.UserServiceImpl">
+	     <property name="userDao" ref="userDaoa"/>
+	</bean>
 </beans>
